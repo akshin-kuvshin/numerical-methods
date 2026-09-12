@@ -1,0 +1,785 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Solver" version="1.5.0.9678"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>18040497-3257-49dc-9cf0-b03c70ed5103</id>
+      <revision>14</revision>
+    </identity>
+    <calculation>
+      <precision>4</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>false</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <mixedNumbers>false</mixedNumbers>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>3</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true" hideElementsHighlightings="true">
+      <paper id="0" orientation="Portrait" width="850" height="1100" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Core" version="1.75.9678.0" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.75.9678.0" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="SpecialFunctions" version="1.75.9678.0" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.75.9678.0" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="0" top="0" width="772" height="25" color="#000000" fontSize="10">
+      <text lang="eng" width="772" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="text-align: center; font-weight: bold;">Лабораторная работа №1. Основы теории погрешностей</p>
+        </content>
+      </text>
+      <text lang="rus" width="772" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p></p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="18" width="773" height="25" color="#000000" fontSize="10">
+      <text lang="eng" width="773" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-weight: bold; text-align: right;">Выполнил: Данила Аксёнов, гр. 932420</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="36" width="774" height="42" color="#000000" fontSize="10">
+      <text lang="eng" width="774" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="text-align: justify;">В заданиях 1 и 2 определить число верных знаков приближенного числа, если известная его абсолютная погрешность.</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="72" width="96" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic; text-decoration: underline;">[Задание 1]</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="90" width="53" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Дано:</p>
+        </content>
+      </text>
+    </region>
+    <region left="144" top="90" width="62" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Найти:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="108" width="84" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">x</e>
+          <e type="operand">1.2571</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="108" width="318" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">n - ? (число верных знаков в узком смысле)</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="126" width="115" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δx</e>
+          <e type="operand">0.1</e>
+          <e type="operand">10</e>
+          <e type="operand">2</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="162" width="80" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Решение:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="180" width="44" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">m</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="54" top="180" width="420" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">(разряд первой ненулевой цифры приближенного числа)</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="198" width="137" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δx</e>
+          <e type="operand">0.5</e>
+          <e type="operand">10</e>
+          <e type="operand">2</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≤</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1</e>
+        </result>
+      </math>
+    </region>
+    <region left="144" top="207" width="630" height="42" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic; text-align: justify;">(подбираем минимальную целую степень, при которой неравенство остаётся верным; обозначим её за k)</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="234" width="57" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">k</e>
+          <e type="operand">2</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="252" width="128" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p>k = m - n + 1 =&gt;</p>
+        </content>
+      </text>
+    </region>
+    <region left="126" top="252" width="91" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">m</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">k</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="126" top="270" width="42" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3</e>
+        </result>
+      </math>
+    </region>
+    <region left="162" top="270" width="84" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">&lt;-- ответ</p>
+        </content>
+      </text>
+    </region>
+    <region left="126" top="288" width="69" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p>x ≈ 1.25</p>
+        </content>
+      </text>
+    </region>
+    <region left="189" top="288" width="454" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">&lt;-- приближенное число с верными знаками (в узком смысле)</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="306" width="96" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic; text-decoration: underline;">[Задание 2]</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="324" width="53" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Дано:</p>
+        </content>
+      </text>
+    </region>
+    <region left="144" top="324" width="62" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Найти:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="342" width="100" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">x</e>
+          <e type="operand">0.007751</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="342" width="42" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">n - ?</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="360" width="123" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δx</e>
+          <e type="operand">0.62</e>
+          <e type="operand">10</e>
+          <e type="operand">5</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="396" width="80" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Решение:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="414" width="57" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">m</e>
+          <e type="operand">3</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="432" width="137" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δx</e>
+          <e type="operand">0.5</e>
+          <e type="operand">10</e>
+          <e type="operand">4</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≤</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="468" width="57" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">k</e>
+          <e type="operand">4</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="486" width="128" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p>k = m - n + 1 =&gt;</p>
+        </content>
+      </text>
+    </region>
+    <region left="126" top="486" width="91" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">m</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">k</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="126" top="504" width="42" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">2</e>
+        </result>
+      </math>
+    </region>
+    <region left="162" top="504" width="84" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">&lt;-- ответ</p>
+        </content>
+      </text>
+    </region>
+    <region left="126" top="522" width="85" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p>x ≈ 0.0077</p>
+        </content>
+      </text>
+    </region>
+    <region left="207" top="522" width="454" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">&lt;-- приближенное число с верными знаками (в узком смысле)</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="549" width="774" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="774" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="text-align: justify;">В задании 3 определить абсолютную и относительную погрешность, если известно число верных знаков.</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="567" width="96" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic; text-decoration: underline;">[Задание 3]</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="585" width="53" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Дано:</p>
+        </content>
+      </text>
+    </region>
+    <region left="144" top="585" width="62" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Найти:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="603" width="84" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">x</e>
+          <e type="operand">17.392</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="603" width="75" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Δx, δx - ?</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="621" width="44" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">4</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="639" width="80" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Решение:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="657" width="44" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">m</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="675" width="91" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">k</e>
+          <e type="operand">m</e>
+          <e type="operand">n</e>
+          <e type="operator" args="2">-</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="675" width="54" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">k</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">2</e>
+          <e type="operator" args="1">-</e>
+        </result>
+      </math>
+    </region>
+    <region left="360" top="684" width="367" height="59" color="#000000" fontSize="10">
+      <text lang="eng" width="357" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic; text-align: justify;">(берём максимальную абсолютную погрешность, при которой приближенное число имеет n верных знаков в узком смысле, чтобы не соврать)</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="693" width="103" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δx</e>
+          <e type="operand">0.5</e>
+          <e type="operand">10</e>
+          <e type="operand">k</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="702" width="82" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δx</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.005</e>
+        </result>
+      </math>
+    </region>
+    <region left="225" top="702" width="98" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">&lt;-- ответ 1</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="729" width="64" height="47" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">δx</e>
+          <e type="operand">Δx</e>
+          <e type="operand">x</e>
+          <e type="function" args="1">abs</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="738" width="90" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">δx</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.0003</e>
+        </result>
+      </math>
+    </region>
+    <region left="234" top="738" width="98" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">&lt;-- ответ 2</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="774" width="774" height="42" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" width="774" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="text-align: justify;">В задании 4 определить абсолютную погрешность ФМП Δz, если известны погрешности её аргументов; значение функции z записать с верными знаками.</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="810" width="96" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic; text-decoration: underline;">[Задание 4]</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="828" width="53" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Дано:</p>
+        </content>
+      </text>
+    </region>
+    <region left="306" top="828" width="62" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Найти:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="846" width="144" height="47" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">x</e>
+          <e type="operand">y</e>
+          <e type="function" args="2">z</e>
+          <e type="operand">x</e>
+          <e type="operator" args="1">-</e>
+          <e type="function" args="1">exp</e>
+          <e type="operand">y</e>
+          <e type="function" args="1">exp</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="306" top="846" width="50" height="42" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Δz - ?<br />z ≈ ?</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="891" width="76" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">x</e>
+          <e type="operand">0.871</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="891" width="76" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">y</e>
+          <e type="operand">1.153</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="909" width="115" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δx</e>
+          <e type="operand">0.5</e>
+          <e type="operand">10</e>
+          <e type="operand">3</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="144" top="909" width="115" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δy</e>
+          <e type="operand">0.1</e>
+          <e type="operand">10</e>
+          <e type="operand">4</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="945" width="80" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">Решение:</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="963" width="273" height="49" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δz</e>
+          <e type="operand">x</e>
+          <e type="operand">y</e>
+          <e type="function" args="2">z</e>
+          <e type="operand">x</e>
+          <e type="function" args="2">diff</e>
+          <e type="function" args="1">abs</e>
+          <e type="operand">Δx</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">x</e>
+          <e type="operand">y</e>
+          <e type="function" args="2">z</e>
+          <e type="operand">y</e>
+          <e type="function" args="2">diff</e>
+          <e type="function" args="1">abs</e>
+          <e type="operand">Δy</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="306" top="963" width="137" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δz</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">6.7384</e>
+          <e type="operand">10</e>
+          <e type="operand">5</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="441" top="972" width="98" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">&lt;-- ответ 1</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1008" width="456" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: normal;">За z0 обозначим приближенное значение ф-ии z в точке (x, y):</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1026" width="95" height="27" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">z0</e>
+          <e type="operand">x</e>
+          <e type="operand">y</e>
+          <e type="function" args="2">z</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="117" top="1026" width="90" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">z0</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.1321</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1053" width="57" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">m</e>
+          <e type="operand">1</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="1071" width="137" height="37" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">Δz</e>
+          <e type="operand">0.5</e>
+          <e type="operand">10</e>
+          <e type="operand">3</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">≤</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1</e>
+        </result>
+      </math>
+    </region>
+    <region left="0" top="1107" width="57" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">k</e>
+          <e type="operand">3</e>
+          <e type="operator" args="1">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="0" top="1125" width="91" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+          <e type="operand">m</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">k</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="126" top="1125" width="42" height="26" color="#000000" fontSize="10">
+      <math>
+        <input>
+          <e type="operand">n</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">3</e>
+        </result>
+      </math>
+    </region>
+    <region left="171" top="1125" width="337" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-style: italic;">&lt;-- кол-во верных в узком смысле знаков в z0</p>
+        </content>
+      </text>
+    </region>
+    <region left="0" top="1143" width="76" height="25" color="#000000" fontSize="10">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p>z ≈ 0.132</p>
+        </content>
+      </text>
+    </region>
+    <region left="72" top="1143" width="98" height="25" color="#000000" fontSize="10" isBreakable="false">
+      <text lang="eng" fontFamily="DejaVu Sans" fontSize="10">
+        <content>
+          <p style="font-weight: bold;">&lt;-- ответ 2</p>
+        </content>
+      </text>
+    </region>
+  </regions>
+</worksheet>
